@@ -7,5 +7,6 @@ Controller.prototype.initialiseSea = function initialiseSea() {
     './images/water0.png',
     './images/water1.png',
   ];
+  let backgroundIndex = 0;
   window.setInterval(() => { }, 1000);
 };
