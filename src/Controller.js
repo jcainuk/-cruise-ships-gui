@@ -28,6 +28,9 @@ Controller.prototype = {
       newPortElement.dataset.portIndex = index;
 
       portsElement.appendChild(newPortElement);
+
+      const portsElementWidth = parseInt(portsElement.style.width, 10);
+      portsElement.style.width = `${portsElementWidth + 256}px`;
     })
   }
 
