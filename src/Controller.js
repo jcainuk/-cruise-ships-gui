@@ -15,9 +15,18 @@ Controller.prototype.initialiseSea = function initialiseSea() {
 };
 
 Controller.prototype = {
-  ...
+  
   renderPorts (ports) {
     const portsElement = document.querySelector('#ports');
     portsElement.style.width = '0px';
+
+    ports.forEach((port, index) => {
+      const newPortElement = document.createElement('div');
+      newPortElement.className = 'port';
+    
+      portsElement.appendChild(newPortElement);
+    })
   }
+
+  
 };
