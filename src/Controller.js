@@ -16,7 +16,7 @@ Controller.prototype.initialiseSea = function initialiseSea() {
 
 Controller.prototype.renderPorts = function renderPorts(ports)  {
 
-  //renderPorts: function(ports) {
+  
     const portsElement = document.querySelector('#ports');
     portsElement.style.width = '0px';
 
@@ -34,5 +34,10 @@ Controller.prototype.renderPorts = function renderPorts(ports)  {
     })
   }
 
+  Controller.prototype.renderShip = function(ship) {
 
-//};
+
+  }
+
+
+
