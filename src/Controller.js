@@ -13,3 +13,8 @@ Controller.prototype.initialiseSea = function initialiseSea() {
     backgroundIndex += 1;
   }, 1000);
 };
+
+Controller.prototype = {
+  ...
+  renderPorts (ports) {}
+};
