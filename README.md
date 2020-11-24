@@ -4,7 +4,7 @@ A JavaScript project from the Software Engineering Fasttrack course at Mancheste
 
 The project utilises JavaScript code to simulate cruise ships sailing around the world and docking at various different ports.
 
-In this project we practised createing a GUI in the browser.
+In this project we practised creating a GUI in the browser.
 
 General info:
 
@@ -40,6 +40,6 @@ Status:
 
 Project status: in progress
 
-Contributors:
+Author:
 
 Jonathan Cain courtesy of Manchester Codes
