@@ -14,9 +14,9 @@ Controller.prototype.initialiseSea = function initialiseSea() {
   }, 1000);
 };
 
-Controller.prototype = {
+Controller.prototype.renderPorts = function renderPorts(ports)  {
 
-  renderPorts(ports) {
+  //renderPorts: function(ports) {
     const portsElement = document.querySelector('#ports');
     portsElement.style.width = '0px';
 
@@ -35,4 +35,4 @@ Controller.prototype = {
   }
 
 
-};
+//};

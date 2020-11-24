@@ -15,9 +15,7 @@
         </div>
     </div>
     <script src="src/controller.js"></script>
-    <script>
-        const controller = new Controller();
-    </script>
+   
     <script src="src/Port.js"></script>
     <script src="src/Ship.js"></script>
     <script src="src/Itinerary.js"></script>
@@ -28,7 +26,9 @@
           new Port('Grand Turk'),
           new Port('San Juan'),
           new Port('Amber Cove')
-        ])
+        ]);
+
+        controller.renderPorts(itinerary.ports);
       </script>
 </body>
 
