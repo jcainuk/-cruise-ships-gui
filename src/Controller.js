@@ -38,6 +38,9 @@ Controller.prototype.renderShip = function (ship) {
   const shipPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
   const portElement = document.querySelector(`[data-port-index='${shipPortIndex}']`);
 
+  const shipElement = document.querySelector('#ship');
+  shipElement.style.top = `${portElement.offsetTop}px`;
+  shipElement.style.left = `${portElement.offsetLeft}px`;
 }
 
 
