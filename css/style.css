@@ -5,9 +5,10 @@ html, body {
   body {
     background-color: #000;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-  
+    justify-content: center;
+    
   }
   #display {
     color: white;
@@ -26,7 +27,11 @@ html, body {
     position: relative;
     overflow-x: auto;
     background-image: url('../images/water0.png');
+
+
   }
+
+  
 
   #ports {
     margin-top: 96px;
@@ -51,7 +56,7 @@ html, body {
     background-color: #FB3640;
     border-bottom: 4px solid #d8040f;
     color: white;
-    font-family: inherit;
+    
     padding: 10px 20px;
     position: absolute;
     bottom: 0;
