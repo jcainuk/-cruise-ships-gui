@@ -65,6 +65,7 @@ Controller.prototype.setSail = function () {
     if (shipLeft === (nextPortElement.offsetLeft - 32)) {
       ship.setSail();
       ship.dock();
+      this.renderMessage(`Docking at ${ship.itinerary.ports[nextPortIndex].name}`);
       clearInterval(sailInterval);
     }
 
