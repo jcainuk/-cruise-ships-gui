@@ -70,3 +70,7 @@ Controller.prototype.setSail = function () {
     shipElement.style.left = `${shipLeft + 1}px`;
   }, 20);
 };
+
+Controller.prototype.renderMessage = function (message) {
+
+ };
