@@ -58,6 +58,7 @@ Controller.prototype.setSail = function () {
   if (!nextPortElement) {
     return alert('End of the line!');
   }
+  this.renderMessage(`Now departing ${ship.currentPort.name}`);
   const shipElement = document.querySelector('#ship');
   const sailInterval = setInterval(() => {
     const shipLeft = parseInt(shipElement.style.left, 10);
