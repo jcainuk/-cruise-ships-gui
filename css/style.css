@@ -18,6 +18,7 @@ html, body {
     font-size: 2em;
     line-height: 0.1em;
     padding-right: 1em;
+    font-family: 'Varela Round', sans-serif;
 }
   #viewport {
     width: 640px;
