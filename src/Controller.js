@@ -33,7 +33,9 @@ Controller.prototype.renderPorts = function renderPorts(ports) {
   });
 };
 
-Controller.prototype.renderShip = function (ship) {
+Controller.prototype.renderShip = function () {
+  const ship = this.ship
+
   const shipPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
   const portElement = document.querySelector(`[data-port-index='${shipPortIndex}']`);
 
