@@ -34,3 +34,17 @@ html, body {
     background-image: url('../images/ship.png');
     position: absolute;
   }
+
+  #sailbutton {
+    border: 0;
+    background-color: #FB3640;
+    border-bottom: 4px solid #d8040f;
+    color: white;
+    font-family: inherit;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: 'Varela Round', sans-serif;
+  }
