@@ -48,3 +48,11 @@ Controller.prototype.renderShip = function () {
   shipElement.style.top = `${portElement.offsetTop + 32}px`;
   shipElement.style.left = `${portElement.offsetLeft - 32}px`;
 };
+
+Controller.prototype.setSail = function () {
+  const ship = this.ship;
+
+  const currentPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
+  const nextPortIndex = currentPortIndex + 1;
+  const nextPortElement = document.querySelector(`[data-port-index='${nextPortIndex}']`);
+};
