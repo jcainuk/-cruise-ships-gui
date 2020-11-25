@@ -55,7 +55,9 @@ Controller.prototype.setSail = function () {
   const currentPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
   const nextPortIndex = currentPortIndex + 1;
   const nextPortElement = document.querySelector(`[data-port-index='${nextPortIndex}']`);
-
+  if (!nextPortElement) {
+    return alert('End of the line!');
+  }
   const shipElement = document.querySelector('#ship');
   const sailInterval = setInterval(() => {
     const shipLeft = parseInt(shipElement.style.left, 10);
