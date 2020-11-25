@@ -6,6 +6,7 @@ function Controller(ship) {
   document.querySelector('#sailbutton').addEventListener('click', () => {
     this.setSail();
   });
+  this.renderDisplay();
 }
 
 Controller.prototype.initialiseSea = function initialiseSea() {
@@ -66,6 +67,7 @@ Controller.prototype.setSail = function () {
       ship.setSail();
       ship.dock();
       this.renderMessage(`Docking at ${ship.itinerary.ports[nextPortIndex].name}`);
+      this.renderDisplay();
       clearInterval(sailInterval);
     }
 
@@ -84,4 +86,30 @@ Controller.prototype.renderMessage = function (message) {
   setTimeout(() => {
     viewport.removeChild(messageElement);
   }, 2000);
+};
+
+Controller.prototype.renderDisplay = function () {
+  const display = document.getElementById('display');
+  const ship = this.ship;
+
+  const currentPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
+  const nextPortIndex = currentPortIndex + 1;
+  const ports = ship.itinerary.ports;
+
+  if (nextPortIndex < ports.length) {
+    display.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+    const currentPort = document.createElement('p');
+    currentPort.innerHTML = `Current port: ${ports[currentPortIndex].name}`;
+    const nextPort = document.createElement('p');
+    nextPort.innerHTML = `Next port: ${ports[nextPortIndex].name}`;
+    fragment.appendChild(currentPort);
+    fragment.appendChild(nextPort);
+    display.appendChild(fragment);
+  } else {
+    display.innerHTML = '';
+    const currentPort = document.createElement('p');
+    currentPort.innerHTML = `Current port: ${ports[currentPortIndex].name}`;
+    display.appendChild(currentPort);
+  }
 };
