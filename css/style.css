@@ -9,6 +9,16 @@ html, body {
     align-items: center;
   
   }
+  #display {
+    color: white;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    line-height: 0.1em;
+    padding-right: 1em;
+}
   #viewport {
     width: 640px;
     height: 256px;
