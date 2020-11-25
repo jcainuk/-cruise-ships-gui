@@ -72,5 +72,10 @@ Controller.prototype.setSail = function () {
 };
 
 Controller.prototype.renderMessage = function (message) {
+  const messageElement = document.createElement('div');
+  messageElement.id = 'message';
+  messageElement.innerHTML = message;
 
- };
+  const viewport = document.querySelector('#viewport');
+  viewport.appendChild(messageElement);
+};
