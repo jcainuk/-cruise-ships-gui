@@ -1,6 +1,11 @@
 function Controller(ship) {
   this.ship = ship;
+
   this.initialiseSea();
+
+  document.querySelector('#sailbutton').addEventListener('click', () => {
+    this.setSail();
+  });
 }
 
 Controller.prototype.initialiseSea = function initialiseSea() {
