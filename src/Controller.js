@@ -55,4 +55,16 @@ Controller.prototype.setSail = function () {
   const currentPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
   const nextPortIndex = currentPortIndex + 1;
   const nextPortElement = document.querySelector(`[data-port-index='${nextPortIndex}']`);
+
+  const shipElement = document.querySelector('#ship');
+  const sailInterval = setInterval(() => {
+    const shipLeft = parseInt(shipElement.style.left, 10);
+    if (shipLeft === (nextPortElement.offsetLeft - 32)) {
+      ship.setSail();
+      ship.dock();
+      clearInterval(sailInterval);
+    }
+
+    shipElement.style.left = `${shipLeft + 1}px`;
+  }, 20);
 };
