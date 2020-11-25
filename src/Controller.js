@@ -78,4 +78,8 @@ Controller.prototype.renderMessage = function (message) {
 
   const viewport = document.querySelector('#viewport');
   viewport.appendChild(messageElement);
+
+  setTimeout(() => {
+    viewport.removeChild(messageElement);
+  }, 2000);
 };
